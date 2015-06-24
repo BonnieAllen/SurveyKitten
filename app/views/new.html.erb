@@ -1,0 +1,11 @@
+<h1>You Have Questions, We Have Answers!</h1>
+
+<% if @question.errors.any? %>
+  <p><strong>Error!</strong> <%= @question.errors.full_messages.to_sentence %></p>
+<% end %>
+
+<%= bootstrap_form_for @question do |f| %>
+  <%= f.content_field :title %>
+  <%= f.content_area  :content %>
+  <button>Save</button>
+<% end %>

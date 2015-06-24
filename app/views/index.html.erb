@@ -1,0 +1,19 @@
+<h1>You Have Questions, We Have The Answers</h1>
+
+<br>
+
+<%= button_to "What Is Your Question?", new_question_path, method: :get %>
+
+<br>
+
+<h2><strong>Previously asked questions:</strong></h2>
+
+<br>
+
+<ul>
+  <% @questions.each do |question| %>
+    <li>
+      <%= link_to question.title, question %>
+    </li>
+  <% end %>
+</ul>
