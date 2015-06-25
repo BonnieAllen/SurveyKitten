@@ -4,10 +4,10 @@ one:
   question_id: MyString
   integer: MyString
   content: MyString
-  : MyText
+  text: MyString
 
 two:
   question_id: MyString
   integer: MyString
   content: MyString
-  : MyText
+  text: MyString

@@ -10,7 +10,9 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find params[:id]
+    @answers = Answer.select { |a| a[:question_id] == @questions.id }
   end
+
 
   def create
     question_params = params[:question]
